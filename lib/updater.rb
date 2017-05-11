@@ -3,7 +3,7 @@ class Updater < Sinatra::Base
   # threaded - False: Will take requests on the reactor thread
   #            True:  Will queue request for background thread
   configure do
-    set :port, 3000
+    set :port, (ENV['RPUSH_UPDATER_PORT'] || "4567").to_i
     disable :logging
   end
 
