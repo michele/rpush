@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
 
 require 'rpush'
+Thread.new do
+  require 'updater'
+end
+
 Rpush::CLI.start(ARGV)

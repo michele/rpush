@@ -8,6 +8,7 @@ gem 'timecop'
 gem 'rpush-redis', '0.4.1'
 gem 'rpush-mongoid', '0.1.0'
 gem 'net-http2'
+gem 'sinatra'
 
 platform :mri do
   gem 'cane'
