@@ -4,6 +4,8 @@ class Updater < Sinatra::Base
   #            True:  Will queue request for background thread
   configure do
     set :port, (ENV['RPUSH_UPDATER_PORT'] || "4567").to_i
+    set :environment, 'production'
+    set :bind, '0.0.0.0'
     disable :logging
   end
 
